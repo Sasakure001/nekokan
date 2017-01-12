@@ -1,0 +1,263 @@
+@charset "utf-8";
+/*京*/
+
+@font-face {
+  font-family: 'MyFont';
+  src: url(../fonts/mini-wakuwaku-maru.otf);
+}
+
+body, h1, h2, h3, h4, h5, p, table, tr, td {
+  /*書体の設定*/
+  font-family: MyFont;
+}
+
+li{
+  list-style-type:decimal;
+  /* 数字でリストを表現*/
+  /*  list-style-type:circle;*/
+  /* 丸でリストを表現*/
+}
+
+
+/*bodyの設定*/
+body {
+
+    background-image: url(../img/background.png);
+    /*背景の設定*/
+    background-repeat: repeat;
+    /*背景はリピート（繰り返し表現）*/
+/*    background-attachment: fixed;
+background-position: right bottom;*/
+
+    /*margin-top: 0;
+    margin-bottom: 0;
+    /*マージンは0*/
+    margin: 0 auto;
+
+
+    /*パディングは0*/
+}
+
+
+
+
+/*h1からh5までの表示位置の設定*/
+/*デフォルトは0ではないので設定が必要*/
+h1, h2, h3, h4, h5 {
+  padding:0;
+  /*パディングは0*/
+  margin: 0;
+  /*マージンは0*/
+  color: #68a9cf;
+}
+
+
+a {
+ color:#0089a1;
+ text-decoration:none;
+}
+/*リンクの設定*/
+a:link {
+  color: #0000FF;
+  /*基本色*/
+}
+a:visited {
+  color: #0000FF;
+  /*一度クリックしたもの*/
+}
+a:hover {
+  color: #b0c4de;
+  /*マウスが上にある場合*/
+}
+
+
+/*コンテナブロック*/
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+
+
+
+    /*  width: 860px;*/
+    /*幅の設定*/
+    font-size: 90%;
+    /*文字サイズの設定（デフォルトの75%）*/
+    text-align: center;
+    /*文字は左あわせ*/
+    line-height: 1.5;
+    /*行間は1.5倍*/
+    color: #333333;
+    /*文字色*/
+    /*background-color: #FFFFFF;*/
+    /*背景色は白*/
+}
+
+/*ヘッドブロック*/
+/* <div id="head">のブロック*/
+#head {
+  text-align: left;
+  /*文字は左あわせ*/
+  padding-top: 12px;
+  padding-right: 0px;
+  padding-left: 8px;
+  padding-bottom: 14px;
+  /*パッディングの設定*/
+  margin: 0px;
+  /*マージンは0*/
+  font-size: 18px;
+  /*文字の大きさをピクセルで設定*/
+  font-weight: bold;
+  /*太文字*/
+}
+
+/*ぱんくずブロック*/
+/* <div id="pan">のブロック*/
+#pan {
+  height: 60px;
+  width:779px;
+  /*有効範囲の高さを設定*/
+  padding-top: 12px;
+  padding-right: 0px;
+  padding-left: 8px;
+  padding-bottom: 14px;
+  /*パッディングの設定*/
+  margin: 0px;
+  /*マージンは0*/
+}
+
+
+table {
+  background-color: #ffebcd;
+/*  background-image: url(../img/tb.jpg);
+*/  font-family: MyFont;
+  border: 1px solid #FFFFFF;
+  /*パッディングの設定*/
+  width: 840px;
+  margin-top: 6px;
+  margin-left: 2px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  padding: 5px;
+  /*border: 3.5px solid #228b22;*/
+  border: 3.5px solid #8b4513;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+      /*境界線の設定*/
+/*  font-size: 90%;*/
+  /*マージンは0*/
+}
+
+#login p {
+}
+
+tr {
+  font-family: MyFont;
+  margin: 0px;
+  padding: 0px;
+}
+
+td {
+  font-family: MyFont;
+  height: 50px;
+  font-size: 220%;
+  text-align: center;
+  /*文字は左あわせ*/
+  vertical-align: top;
+  margin: 0px;
+  padding: 0px;
+  /*  background-image: url(../img/pan-bg.jpg);*/
+
+}
+
+/*ぱんくずの中の右あわせ*/
+/*<td class="right">ブロック*/
+td.right{
+  text-align: right;
+  /*文字は右あわせ*/
+  margin: 0px;
+  padding: 0px;
+}
+
+th {
+  font-family: MyFont;
+  border-top: none;
+/*  border-bottom: none;
+*/  border-bottom: 5px solid #8b4513;
+  border-right: none;
+  /*background-color: #88bfbf;*/
+  font-weight: normal;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #d2691e;
+  font-size: 230%;
+}
+
+/* <div id="headTitle">のブロック*/
+#headTitle {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  font-size:30px;
+}
+
+
+.center {
+    text-align: center;
+}
+
+button {
+    width: auto;
+    padding:0;
+    margin:0;
+    background:none;
+    border:0;
+    font-size:0;
+    line-height:0;
+    overflow:visible;
+    cursor:pointer;
+}
+
+#id{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#btn_b{
+
+    margin-top:10px;
+
+  background-image:
+  url(../img/mkmn01.png);
+
+  background-repeat:
+  no-repeat;
+
+  background-position:
+  center;
+
+  background-size:750px 105px;
+
+}
+
+#video{
+  margin-top: 6px;
+  margin-left: 2px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 4px solid #8b4513;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+}
+
+#video_index{
+  border: 4px solid #8b4513;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+}
+
+a:link { color: #ff8c00; }
+a:visited { color: #d2691e; }
+a:hover { color: #ffa500; }
+a:active { color: #ffa500; }

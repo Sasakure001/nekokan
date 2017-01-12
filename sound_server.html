@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sound server</title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<audio id="sound-file1" preload="auto">
+    <source id="sound-src" src="sound/test1.wav" type="audio/wav">
+</audio>
+<audio id="sound-file2" preload="auto">
+    <source id="sound-src" src="sound/test2.wav" type="audio/wav">
+</audio>
+<audio id="sound-file3" preload="auto">
+    <source id="sound-src" src="sound/test3.wav" type="audio/wav">
+</audio>
+<audio id="sound-file4" preload="auto">
+    <source id="sound-src" src="sound/test4.wav" type="audio/wav">
+</audio>
+<script>
+$(function(){
+    function play(url){
+        $('#sound-src').attr('src', url);
+        $( '#sound-file' ).get(0).play() ;
+    }
+    var timer_id = setInterval( function () {
+        sound_monitor();
+    } , 1000 );
+    function sound_monitor(){
+        $.ajax({
+            type: "POST",
+            // url: "http://nekokann.local/nekokan/sound_server.php",
+            url: "sound_server.php",
+            // data:{
+            //     code:code
+            // },
+            dataType: "json",
+            /**
+            * Ajax通信が成功した場合に呼び出されるメソッド
+            */
+        }).done(function(data){
+            for (var i = 0; Object.keys(data).length > i; i++) {
+                if (data[i].nekokan_sound_flg == 0) { //未再生の場合
+                    var play_sound = data[i].nekokan_sound_url; //再生したい音声ファイル
+                    if (play_sound == "sound/test1.wav") {
+                        $( '#sound-file1' ).get(0).play() ;
+                    }
+                    if (play_sound == "sound/test2.wav") {
+                        $( '#sound-file2' ).get(0).play() ;
+                    }
+                    if (play_sound == "sound/test3.wav") {
+                        $( '#sound-file3' ).get(0).play() ;
+                    }
+                    if (play_sound == "sound/test4.wav") {
+                        $( '#sound-file4' ).get(0).play() ;
+                    }
+                    console.log(play_sound + "  を再生します。");//ここで再生処理
+
+                    // $('#sound-src').attr('src', play_sound);
+                    //$( '#sound-file' ).get(0).play() ;
+                    played_update(data[i].nekokan_sound_id);
+                    return true;
+                }
+            }
+        }).fail(function(data){
+            /**
+            * Ajax通信が失敗場合に呼び出されるメソッド
+            */
+            return false;
+        });
+    }
+    function played_update(id){
+        //console.log(id);
+        $.ajax({
+            type: "POST",
+            url: "played_update.php",
+            dataType: "json",
+            data:{
+                id:id
+            },
+            /**
+            * Ajax通信が成功した場合に呼び出されるメソッド
+            */
+        }).done(function(data){
+        }).fail(function(data){
+            /**
+            * Ajax通信が失敗場合に呼び出されるメソッド
+            */
+            return false;
+        });
+    }
+
+
+
+
+});
+</script>
+</body>
+</html>

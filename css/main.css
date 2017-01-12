@@ -1,0 +1,271 @@
+@charset "utf-8";
+/*京*/
+
+@font-face {
+  font-family: 'MyFont';
+  src: url(../fonts/mini-wakuwaku-maru.otf);
+}
+
+body, h1, h2, h3, h4, h5, p {
+  /*書体の設定*/
+  font-family: MyFont;
+}
+
+li{
+	list-style-type:decimal;
+  /* 数字でリストを表現*/
+  /*	list-style-type:circle;*/
+  /* 丸でリストを表現*/
+}
+
+
+/*bodyの設定*/
+body {
+
+  background-image: url(../img/background.png);
+  /*背景の設定*/
+  background-repeat: repeat;
+  /*背景はリピート（繰り返し表現）*/
+/*    background-attachment: fixed;
+background-position: right bottom;*/
+
+    /*margin-top: 0;
+    margin-bottom: 0;
+    /*マージンは0*/
+    margin: 0 auto;
+
+
+    /*パディングは0*/
+  }
+
+
+
+
+  /*h1からh5までの表示位置の設定*/
+  /*デフォルトは0ではないので設定が必要*/
+  h1, h2, h3, h4, h5 {
+   padding:0;
+   /*パディングは0*/
+   margin: 0;
+   /*マージンは0*/
+   color: #68a9cf;
+ }
+
+
+ a {
+   color:#0089a1;
+   text-decoration:none;
+ }
+ /*リンクの設定*/
+ a:link {
+   color: #0000FF;
+   /*基本色*/
+ }
+ a:visited {
+   color: #0000FF;
+   /*一度クリックしたもの*/
+ }
+ a:hover {
+   color: #b0c4de;
+   /*マウスが上にある場合*/
+ }
+
+
+ /*コンテナブロック*/
+ #container {
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 0;
+   margin-bottom: 0;
+
+
+
+   /*	width: 860px;*/
+   /*幅の設定*/
+   font-size: 90%;
+   /*文字サイズの設定（デフォルトの75%）*/
+   text-align: center;
+   /*文字は左あわせ*/
+   line-height: 1.5;
+   /*行間は1.5倍*/
+   color: #333333;
+   /*文字色*/
+   /*background-color: #FFFFFF;*/
+   /*背景色は白*/
+ }
+
+ /*ヘッドブロック*/
+ /* <div id="head">のブロック*/
+ #head {
+   text-align: left;
+   /*文字は左あわせ*/
+   padding-top: 12px;
+   padding-right: 0px;
+   padding-left: 8px;
+   padding-bottom: 14px;
+   /*パッディングの設定*/
+   margin: 0px;
+   /*マージンは0*/
+   font-size: 18px;
+   /*文字の大きさをピクセルで設定*/
+   font-weight: bold;
+   /*太文字*/
+ }
+
+ /*ぱんくずブロック*/
+ /* <div id="pan">のブロック*/
+ #pan {
+   height: 60px;
+   width:779px;
+   /*有効範囲の高さを設定*/
+   padding-top: 12px;
+   padding-right: 0px;
+   padding-left: 8px;
+   padding-bottom: 14px;
+   /*パッディングの設定*/
+   margin: 0px;
+   /*マージンは0*/
+ }
+
+
+ /*ぱんくずの中のテーブル*/
+ #pan table {
+   border: 1px solid #FFFFFF;
+   padding-top: 0px;
+   padding-left: 8px;
+   padding-right: 8px;
+   padding-bottom: 0px;
+   /*パッディングの設定*/
+   width: 840px;
+   /*幅の設定*/
+   margin: 0px;
+   /*マージンは0*/
+ }
+
+ #login p {
+ }
+
+ #pan tr {
+   margin: 0px;
+   padding: 0px;
+ }
+
+
+ #pan td {
+   height: 50px;
+   font-size: 160%;
+   text-align: center;
+   /*文字は左あわせ*/
+   vertical-align: top;
+   margin: 0px;
+   padding: 0px;
+   /*	background-image: url(../img/pan-bg.jpg);*/
+
+ }
+
+ /*ぱんくずの中の右あわせ*/
+ /*<td class="right">ブロック*/
+ #pan td.right{
+  font-size: 85%;
+  text-align: right;
+  /*文字は右あわせ*/
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* <div id="headTitle">のブロック*/
+#headTitle {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	font-size:30px;
+}
+
+
+.center {
+  text-align: center;
+}
+
+button {
+  width: auto;
+  padding:0;
+  margin:0;
+  background:none;
+  border:0;
+  font-size:0;
+  line-height:0;
+  overflow:visible;
+  cursor:pointer;
+}
+
+#id{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+#btn_b{
+
+  margin-top:10px;
+
+  background-image:
+  url(../img/mkmn01.png);
+
+  background-repeat:
+  no-repeat;
+
+  background-position:
+  center;
+
+  background-size:750px 105px;
+
+}
+
+#video{
+  position: relative;
+  margin-top: 6px;
+  margin-left: 2px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 4px solid #8b4513;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+}
+
+#video_index{
+  position: relative;
+  border: 4px solid #8b4513;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+}
+
+
+#image-btn {
+  font-family: MyFont;
+  font-size: 250%;
+  width: 200px;
+  height: 60px;
+  color: #ff8c00;
+  background: #ffe4b5;
+}
+
+#id_text{
+  font-family: MyFont;
+}
+
+#pass_text{
+  font-family: MyFont;
+}
+
+#red{
+  color: #000000;
+  font-size: 250%;
+}
+
+
+/* This CSS stylesheet defines styles used by required elements in a flex application page that supports browser history */
+#ie_historyFrame { width: 0px; height: 0px; display:none }
+#firefox_anchorDiv { width: 0px; height: 0px; display:none }
+#safari_formDiv { width: 0px; height: 0px; display:none }
+#safari_rememberDiv { width: 0px; height: 0px; display:none }
